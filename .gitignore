@@ -1,0 +1,35 @@
+# Node.js dependencies
+node_modules/
+
+# PHP Composer dependencies
+vendor/
+
+# Environment variables
+.env
+
+# IDE specific files
+*.idea/
+*.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Cache
+cache/
+*.cache
+
+# Temporary files
+*.tmp
+*.swp
+
+# Build files
+dist/
+build/
+
+# PHP specific
+*.php~
+*.bak
