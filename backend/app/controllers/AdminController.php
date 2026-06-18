@@ -84,9 +84,9 @@ class AdminController extends Controller
             $attendance[] = [
                 'full_name'  => $member['full_name'],
                 'job_title'  => $member['job_title'],
-                'present'    => count(array_filter($records, fn($r) => $r['status'] === 'present')),
-                'absent'     => count(array_filter($records, fn($r) => $r['status'] === 'absent')),
-                'late'       => count(array_filter($records, fn($r) => $r['status'] === 'late')),
+                'present'    => count(array_filter($records, fn($r) => ($r['attendance_status'] ?? null) === 'present')),
+                'absent'     => count(array_filter($records, fn($r) => ($r['attendance_status'] ?? null) === 'absent')),
+                'late'       => count(array_filter($records, fn($r) => ($r['attendance_status'] ?? null) === 'late')),
                 'total'      => count($records),
             ];
         }

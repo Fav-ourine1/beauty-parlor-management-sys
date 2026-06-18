@@ -3,6 +3,10 @@
  * Web Routes — serve HTML views
  */
 
+// ── Public pages ──────────────────────────────────────────────
+$router->get('/about',   ['PagesController', 'about']);
+$router->get('/contact', ['PagesController', 'contact']);
+
 // ── Guest pages ───────────────────────────────────────────────
 $router->get('/',          ['AuthController', 'showLogin']);
 $router->get('/login',     ['AuthController', 'showLogin'],    [fn() => Middleware::guest()]);

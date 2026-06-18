@@ -8,7 +8,29 @@ $cashRevenue  = array_sum(array_column($revenue, 'cash_revenue'));
 $mpesaRevenue = array_sum(array_column($revenue, 'mpesa_revenue'));
 ?>
 <?php include BASE_PATH . '/app/views/layouts/head.php'; ?>
+<style>
+@media print {
+  .sidebar, .sidebar-overlay, #sidebar-overlay, .topbar, .print-hide { display: none !important; }
+  .main-content { margin: 0 !important; padding: 0 !important; }
+  .app-shell { display: block !important; }
+  .dashboard-grid { display: block !important; }
+  .card { break-inside: avoid; margin-bottom: 20px; box-shadow: none; border: 1px solid #ddd; }
+  .stats-grid { display: grid !important; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  body { font-size: 12px; }
+  .print-header { display: block !important; }
+}
+.print-header { display: none; }
+</style>
 <?php include BASE_PATH . '/app/views/layouts/nav.php'; ?>
+
+<div class="print-header" style="margin-bottom:20px">
+  <h2 style="margin:0">Mbagathi Beauty Parlour — Reports</h2>
+  <p style="margin:4px 0 0;color:#666">Generated: <?= date('d M Y, H:i') ?></p>
+</div>
+
+<div class="print-hide" style="display:flex;justify-content:flex-end;margin-bottom:16px">
+  <button class="btn btn-primary" onclick="window.print()">🖨️ Print / Save PDF</button>
+</div>
 
 <!-- Summary stats -->
 <div class="stats-grid" style="margin-bottom:28px">

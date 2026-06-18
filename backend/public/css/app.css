@@ -524,3 +524,199 @@ tbody tr:hover { background: var(--bg); }
   .auth-card { padding: 28px 22px; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ── Site Footer ─────────────────────────────────────────────── */
+.site-footer {
+  background: var(--text);
+  color: #c8c5d0;
+  margin-top: 48px;
+  font-size: .875rem;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 32px 36px;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1.4fr;
+  gap: 40px;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.footer-logo .logo-icon { font-size: 1.4rem; }
+.footer-logo .logo-name { font-size: 1.15rem; font-weight: 700; color: #fff; }
+.footer-tagline { color: #a09aad; line-height: 1.6; margin-bottom: 20px; }
+.footer-socials { display: flex; gap: 10px; }
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.15);
+  color: #c8c5d0;
+  transition: background .2s, color .2s;
+}
+.social-link:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+.footer-heading { color: #fff; font-size: .82rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 16px; }
+.footer-links { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.footer-links li { color: #a09aad; }
+.footer-links a { color: #a09aad; transition: color .2s; }
+.footer-links a:hover { color: var(--primary-light); }
+.footer-contact li { display: flex; align-items: flex-start; gap: 10px; }
+.footer-contact svg { flex-shrink: 0; margin-top: 2px; opacity: .7; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 18px 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: .8rem;
+  color: #706b7d;
+}
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { color: #706b7d; }
+.footer-bottom-links a:hover { color: var(--primary-light); }
+
+/* ── Public pages (About / Contact) ─────────────────────────── */
+.public-page { background: var(--bg); }
+.public-header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: var(--shadow-sm);
+}
+.public-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.public-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+.public-logo .logo-icon { font-size: 1.4rem; }
+.public-logo .logo-name { font-size: 1.1rem; color: var(--text); }
+.public-logo .logo-sub  { font-size: .72rem; color: var(--text-muted); margin-top: 2px; }
+.public-nav { display: flex; align-items: center; gap: 24px; }
+.public-nav a { color: var(--text-muted); font-size: .9rem; transition: color .2s; }
+.public-nav a:hover, .public-nav a.active { color: var(--primary); }
+.public-main { min-height: calc(100vh - 64px); }
+.page-hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #fff;
+  text-align: center;
+  padding: 72px 32px;
+}
+.page-hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; }
+.page-hero p  { font-size: 1.05rem; opacity: .88; }
+.content-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px 32px;
+}
+.section-heading { text-align: center; margin-bottom: 40px; }
+.section-heading h2 { font-size: 1.6rem; font-weight: 700; }
+.section-heading p  { color: var(--text-muted); margin-top: 6px; }
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.content-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
+}
+.content-icon { font-size: 2rem; margin-bottom: 14px; }
+.content-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
+.content-card p, .content-card li { color: var(--text-muted); line-height: 1.7; }
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px 56px;
+}
+.team-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+.team-avatar {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.team-name { font-weight: 700; font-size: 1rem; }
+.team-role { color: var(--primary); font-size: .82rem; margin: 4px 0 12px; }
+.team-bio  { color: var(--text-muted); font-size: .875rem; line-height: 1.6; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 48px;
+  align-items: start;
+}
+.contact-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 24px; }
+.contact-list li { display: flex; gap: 16px; align-items: flex-start; }
+.contact-icon-box {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.contact-list strong { display: block; font-weight: 600; margin-bottom: 4px; }
+.contact-list p { color: var(--text-muted); margin: 0; line-height: 1.6; }
+.contact-form-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 900px) {
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .content-grid, .team-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .public-header-inner { padding: 0 20px; }
+}
+@media (max-width: 600px) {
+  .footer-inner { grid-template-columns: 1fr; padding: 32px 20px; }
+  .footer-bottom { padding: 16px 20px; flex-direction: column; text-align: center; }
+  .page-hero { padding: 48px 20px; }
+  .page-hero h1 { font-size: 1.6rem; }
+  .content-section { padding: 40px 20px; }
+  .team-grid { padding: 0 20px 40px; }
+}
