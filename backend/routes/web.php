@@ -8,7 +8,7 @@ $router->get('/about',   ['PagesController', 'about']);
 $router->get('/contact', ['PagesController', 'contact']);
 
 // ── Guest pages ───────────────────────────────────────────────
-$router->get('/',          ['AuthController', 'showLogin']);
+$router->get('/',          ['PagesController', 'home']);
 $router->get('/login',     ['AuthController', 'showLogin'],    [fn() => Middleware::guest()]);
 $router->post('/login',    ['AuthController', 'login'],        [fn() => Middleware::guest()]);
 $router->get('/register',  ['AuthController', 'showRegister'], [fn() => Middleware::guest()]);
